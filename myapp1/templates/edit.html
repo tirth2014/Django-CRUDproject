@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form method="POST" action="/update/{{ student.id }}">
+    {% csrf_token %}
+
+<table>
+        <tr><td><input name="sId" required value="{{ student.sId }}"> </td></tr>
+        <tr><td><input name="sName" required value="{{ student.sName }}"> </td></tr>
+        <tr><td><input name="sEmail" required value="{{ student.sEmail }}"> </td></tr>
+        <tr><td><input name="sGender" required value="{{ student.sGender }}"> </td></tr>
+        <tr><td><button type="submit">Update</button></td></tr>
+    </table>
+</form>
+</body>
+</html>
